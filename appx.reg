@@ -1,0 +1,51 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.appx]
+@="AppX Package"
+"FriendlyTypeName"="AppX Package"
+
+[HKEY_CLASSES_ROOT\.appx\DefaultIcon]
+@="shell32.dll,245"
+
+[HKEY_CLASSES_ROOT\.appx\shell\Install Package\command]
+@="cmd /c echo Installing %1 & echo. & powershell -NoProfile \"Add-AppPackage -path '%1'\" & pause"
+
+[HKEY_CLASSES_ROOT\.appxbundle]
+@="AppX Bundle"
+"FriendlyTypeName"="AppX Bundle"
+
+[HKEY_CLASSES_ROOT\.appxbundle\DefaultIcon]
+@="shell32.dll,245"
+
+[HKEY_CLASSES_ROOT\.appxbundle\shell\Install Package\command]
+@="cmd /c echo Installing %1 & echo. & powershell -NoProfile \"Add-AppPackage -path '%1'\" & pause"
+
+[HKEY_CLASSES_ROOT\.eappxbundle]
+@="eAppX Bundle"
+"FriendlyTypeName"="eAppX Bundle"
+
+[HKEY_CLASSES_ROOT\.eappxbundle\DefaultIcon]
+@="shell32.dll,245"
+
+[HKEY_CLASSES_ROOT\.eappxbundle\shell\Install Package\command]
+@="cmd /c echo Installing %1 & echo. & powershell -NoProfile \"Add-AppPackage -path '%1'\" & pause"
+
+[HKEY_CLASSES_ROOT\.msixbundle]
+@="Msix Bundle"
+"FriendlyTypeName"="Msix Bundle"
+
+[HKEY_CLASSES_ROOT\.msixbundle\DefaultIcon]
+@="shell32.dll,245"
+
+[HKEY_CLASSES_ROOT\.msixbundle\shell\Install Package\command]
+@="cmd /c echo Installing %1 & echo. & powershell -NoProfile \"Add-AppPackage -path '%1'\" & pause"
+
+[HKEY_CLASSES_ROOT\.cab]
+@="Cab File"
+"FriendlyTypeName"="Cab File"
+
+[HKEY_CLASSES_ROOT\.cab\DefaultIcon]
+@="shell32.dll,245"
+
+[HKEY_CLASSES_ROOT\.cab\shell\Install Package\command]
+@="cmd /c echo Installing %1 & echo. & powershell -NoProfile \"Add-WindowsPackage -Online -PackagePath '%1'\" & echo Restart your computer to complete installation. & pause"
